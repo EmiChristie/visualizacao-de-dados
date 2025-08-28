@@ -1,0 +1,168 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay&code=G4QwTgBAHgglCWBnAIiALiCBeCBtA5AEwAMAjAKz4A0ERZAbNbSaQOxN2kAcHLAnL2IlBhUiMIiAzCIAs-ALoBuAFChIYEAHcAaiAA2AVwCmibHmUQIkrvQB0rCAFoIM4jNv0qFiIT7knVjb2XpaipLb-zr7kIRCs9O5cAWERsTJ8rLZ8AfGJseR84ZIB6Zl8sdZcEQEFRbF81h4BlaneMvTkTc4NVZ7ekqxVhCUdHspKyqrgEAAm6CCkZho6-saItgC2IAAOABQAZgYAdgDGaPAA9kcQu6B6AJQQAN7eYEZoBmDXL5aWd8YALgg23AiCMADE9Bd0Ld9LY0BdwfAoEYZrtCPd7rFLPA0EYNgBlNAATz0RiBP1-lhOFyhYCBdwgAD4cMQIAB-WgAYnoyFY4IAopQIED8FyBfFWPF8N5LABfbxylRy-4qZQXbbnK5mSnnNBkimyiB4qBoUW6MDwEAAc4AxxdZpgTgALAygCAgE4GDYGPQgObAi6QEBHB3osj-TAkQgyR7OcEgABeRiOAYAwuAjiAAF8AI0wzgAKjsjGALgBDgIABQAQtQjWT9mbaCcU3iwDL5bEEbTcxcoIaqfsjOhPuTnkbLFsAObwE6F4nbceUqmWElLoEERAYE4AawUk4gcuxvzmGG08CMmgpx8PiBAwCMMEQAEkZ8vD5ZtsijHoAEroJcQKEIeCpUmBR7dhctLnNsg6_GglrTtOpaiiACCIPWQ5BlsaDtkChynFq1y7CCGgbIgjwrr8agQDSRx4gxZhkSAFG4MQ8i2OhSC6IYRgQAA1LQAA8uZgAA9Ey-AqKuwLgKx6z7EGAqes6BzHGclwkbi-JUZ-dFXIxaCCTgOkbJs4C7qWgkQGZthgpaJgAHKsfxQn4KKNn4KJUkCXZZ4gLY_xGPCiI_miGJeRAGwbMJ4m5kyokSVJMmriqqVUm8HxfAZDFthlR6KrEsAYfBlgBUCJVIKgGAnog2x6LiAAy8BHB-smIM6FzXhA-z6GCRoQbeljEnASBlRAWYbOO-AWladphjF9xYb8U1GE1FwnIBVyihs8AzDMZIrZYa1_hcGB4kCfDECea0AOI7ECrixMNjoYAAWtBGybka1FrouM2tYg-1GMdvzbuAzY3YeKYzECpDEMQg0nn9EAQ2AUMnpYsPw4jg3ePIWNvSAn0XN95iyZYqNUp13VAohxhEzTGAY1dMhM78OMQAjSOU5B-nUwhAOikDINgx1LPNnw7P6djqa47zlOvbJguWLTPUM0YHMjWNr6pkYA4QNDfOWPs8B6O2ACyFwzDN-KasS4urpo-1oM6QKSMbJvOkY8DTs6zb4FwxAAKROzTXWaDVIAEs6_p071_Va7LECNs2rj6RBVKE94DmXogP1Uqja3muA832o6dGuu6-IQG8foLR6Dohs3eWWkGNxLU764zfmHZExVxOkET9tx8DBcTnzSlehP-B5yYnZpUTIbwLhWnIL-IDEgRGnETc-1QHpfNZZ81wHxAABU3PEAV8r45YOeWCva9XCpwNHNOoqb9uc4APIGGgFaz9tpHA3n6YkABVbYZ5xyEU0tqXYB8j6_BPjlc-V9yCpQVEqIAA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    var xAxisData = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'];
+var rawValues = [
+  386.7 - 404.6,
+  295 - 386.7,
+  211.5 - 295,
+  764.8 - 211.5,
+  497.9 - 764.8,
+  591.3 - 497.9,
+  388.5 - 591.3,
+  938.6 - 388.5,
+  465.6 - 938.6,
+  378.2 - 465.6
+];
+
+var data1 = rawValues.map(function (val) {
+  return {
+    value: parseFloat(val.toFixed(2)),
+    itemStyle: {
+      color: val >= 0 ? '#6D7FE5' : '#E76776'
+    }
+  };
+});
+
+option = {
+  title: {
+    text: 'Variação da chuva acumulada por ano (2015 a 2024) - Fazenda Carnaúba - Taperoá - PB',
+    left: 'center',
+    top: 20,
+  },
+  toolbox: {
+    feature: {
+      magicType: {
+        type: ['stack']
+      },
+      dataView: {},
+      saveAsImage: {
+        pixelRatio: 2
+      }
+    }
+  },
+  tooltip: {
+    trigger: 'axis',
+    formatter: function (params) {
+      var content = params[0].axisValue + '<br/>';
+      params.forEach(function (item) {
+        content += item.marker + item.seriesName + ': ' + '<b>'+item.data.value.toFixed(2) + ' mm</b><br/>';
+      });
+      return content;
+    }
+  },
+  xAxis: {
+    data: xAxisData,
+    splitLine: {
+      show: false
+    }
+  },
+  yAxis: {
+    name: 'Variação (mm)',
+    nameLocation: 'middle',
+    nameRotate: 90,
+    nameGap: 80,
+    axisLabel: {formatter: '{value} mm'}
+  },
+  dataZoom: [
+    {
+      type: 'inside',
+      start: 0,
+      end: 100
+    },
+    {
+      start: 0,
+      end: 100
+    }
+  ],
+      dataZoom: [
+        {
+          show: true,
+          start: 0,
+          end: 100
+        },
+        {
+          type: 'inside',
+          start: 0,
+          end: 100
+        },
+        {
+          show: true,
+          yAxisIndex: 0,
+          filterMode: 'empty',
+          width: 30,
+          height: '80%',
+          showDataShadow: false,
+          left: 40
+        }
+      ],
+  series: [
+    {
+      name: 'Variação da chuva em relação ao ano anterior (mm)',
+      type: 'bar',
+      data: data1,
+      emphasis: {
+        focus: 'series'
+      },
+      animationDelay: function (idx) {
+        return idx * 10;
+      }
+    }
+  ],
+  animationEasing: 'elasticOut',
+  animationDelayUpdate: function (idx) {
+    return idx * 5;
+  }
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
