@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+
+    var option = {
+      color: ['#37A2FF', '#FF0087', '#FFBF00'],
+      title: {
+        text: 'Volume de chuva acumulada por ano (2015 a 2024) - Fazenda Carnaúba - Taperoá - PB',
+        top: 15,
+        left: 'center'
+      },
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          label: {
+            backgroundColor: '#6a7985'
+          }
+        }
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      dataZoom: [
+        {
+          type: 'inside',
+          start: 0,
+          end: 100
+        },
+        {
+          type: 'slider',
+          start: 0,
+          end: 100
+        }
+      ],
+
+      xAxis: [
+        {
+          type: 'category',
+          boundaryGap: false,
+          data: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Volume da chuva (mm)',
+          nameLocation: 'middle',
+          nameRotate: 90,
+          nameGap: 100,
+          axisLabel: {formatter: '{value} mm'}
+        }
+      ],
+      series: [
+        {
+          name: 'Volume da chuva em mm',
+          type: 'line',
+          stack: 'Total',
+          smooth: true,
+          lineStyle: {
+            width: 0
+          },
+          showSymbol: false,
+          areaStyle: {
+            opacity: 0.8,
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              {
+                offset: 0,
+                color: 'rgb(0, 221, 255)'
+              },
+              {
+                offset: 1,
+                color: 'rgb(116, 21, 219)'
+              }
+            ])
+          },
+          emphasis: {
+            focus: 'series'
+          },
+          data: [
+            386.7,
+            295,
+            211.5,
+            764.8,
+            497.9,
+            591.3,
+            388.5,
+            938.6,
+            465.6,
+            378.2
+          ]
+        }
+      ]
+    };
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
