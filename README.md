@@ -4,3 +4,5 @@ Repositório referente às visualizações dinâmicas produzidas na disciplina d
 Visualização 1 do Lab 6: https://emichristie.github.io/visualizacao-de-dados/lab6-projeto1.html
 
 Visualização 2 do Lab 6: https://emichristie.github.io/visualizacao-de-dados/lab6-projeto2.html
+
+Visualização do Lab 7: https://emichristie.github.io/visualizacao-de-dados/lab7-projeto.html
